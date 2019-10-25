@@ -1,5 +1,5 @@
 <template>
-  <form v-on:click.prevent="onSubmit()">
+  <form v-on:click.prevent="onFormSubmit()">
     <TextField text="Username" class="form-input"></TextField>
     <TextField text="Password" class="form-input"></TextField>
     <button type="submit" class="form-input">Submit</button>
@@ -10,7 +10,12 @@
 import TextField from "@/components/TextField";
 export default {
   name: "Login",
-  components: {TextField}
+  components: {TextField},
+  methods: {
+    onFormSubmit: function () {
+      console.log("Form submitted")
+    }
+  }
 }
 </script>
 
