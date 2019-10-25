@@ -1,20 +1,16 @@
 <template>
   <form v-on:click.prevent="">
-    <div class="form-input flow">
-      <label for="username">Username: </label>
-      <input type="text" id="username">
-    </div>
-    <div class="form-input flow">
-      <label for="password">Password: </label>
-      <input type="text" id="password">
-    </div>
+    <TextField text="Username" class="form-input"></TextField>
+    <TextField text="Password" class="form-input"></TextField>
     <button type="submit" class="form-input">Submit</button>
   </form>
 </template>
 
 <script>
+  import TextField from "@/components/TextField";
   export default {
-    name: "Login"
+    name: "Login",
+      components: {TextField}
   }
 </script>
 
@@ -28,13 +24,5 @@
   button.form-input {
     display: block;
     width: 150px;
-  }
-
-  .flow {
-    display: flex;
-    flex-direction: row;
-  }
-  .flow > * {
-    flex: 1;
   }
 </style>
