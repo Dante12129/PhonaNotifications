@@ -19,10 +19,11 @@ export default {
     margin: 5px auto;
   }
   div.form-input {
-    width: 250px;
+    width: 35%;
   }
   button.form-input {
     display: block;
-    width: 150px;
+    width: 15%;
+    padding: 0;
   }
 </style>

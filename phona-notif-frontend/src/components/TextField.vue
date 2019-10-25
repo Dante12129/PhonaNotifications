@@ -19,7 +19,11 @@ export default {
     display: flex;
     flex-direction: row;
   }
-  .flow > * {
+
+  .flow > label {
     flex: 1;
+  }
+  .flow > input {
+    flex: 2;
   }
 </style>
