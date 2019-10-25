@@ -1,8 +1,10 @@
 <template>
   <form v-on:click.prevent="onFormSubmit()">
-    <TextField text="Username" class="form-input"></TextField>
-    <TextField text="Password" class="form-input"></TextField>
-    <button type="submit" class="form-input">Submit</button>
+    <div class="grid">
+      <TextField text="Username"></TextField>
+      <TextField text="Password"></TextField>
+    </div>
+    <button type="submit">Submit</button>
   </form>
 </template>
 
@@ -20,15 +22,36 @@ export default {
 </script>
 
 <style scoped>
-  .form-input {
-    margin: 5px auto;
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 5px;
   }
-  div.form-input {
-    width: 35%;
+
+  form {
+    margin: 0 auto;
+    width: 60%
   }
-  button.form-input {
+
+  @media (max-width: 500px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    form {
+      width: 100%;
+    }
+  }
+
+  button {
     display: block;
-    width: 15%;
-    padding: 0;
+    margin: 5px auto;
+    width: 30%;
+  }
+
+  @media (max-width: 500px) {
+    button {
+      width: 50%;
+    }
   }
 </style>

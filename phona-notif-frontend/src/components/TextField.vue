@@ -1,5 +1,5 @@
 <template>
-  <div class="flow">
+  <div>
     <label v-bind:for="text.toLowerCase()">{{ text }}: </label>
     <input type="text" v-bind:id="text.toLowerCase()">
   </div>
@@ -15,16 +15,7 @@ export default {
 </script>
 
 <style scoped>
-  .flow {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .flow > label {
-    flex: 1;
-  }
-  .flow > input {
-    flex: 2;
+  div {
+    display: contents;
   }
 </style>
