@@ -18,6 +18,7 @@ export default {
   .flow {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .flow > label {
