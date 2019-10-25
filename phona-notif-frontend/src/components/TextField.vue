@@ -6,12 +6,12 @@
 </template>
 
 <script>
-    export default {
-        name: "TextField",
-        props: {
-            text: String
-        }
-    }
+export default {
+  name: "TextField",
+  props: {
+      text: String
+  }
+}
 </script>
 
 <style scoped>
