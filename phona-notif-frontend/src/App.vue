@@ -19,8 +19,8 @@ export default {
 
 <style>
 html {
-  background: black;
-  color: white;
+  background: white;
+  color: black;
 }
 
 #app {
