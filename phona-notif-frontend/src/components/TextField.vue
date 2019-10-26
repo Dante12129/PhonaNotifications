@@ -1,9 +1,7 @@
 <template>
   <div>
-    <!--suppress JSUnresolvedFunction -->
-    <label :for="text.toLowerCase()">{{ text }}: </label>
-    <!--suppress JSUnresolvedFunction -->
-    <input type="text" :name="text.toLowerCase()" :id="text.toLowerCase()">
+    <label :for="textLowercase">{{ text }}: </label>
+    <input type="text" :name="textLowercase" :id="textLowercase">
   </div>
 </template>
 
@@ -12,6 +10,12 @@ export default {
   name: "TextField",
   props: {
       text: String
+  },
+  computed: {
+    textLowercase: function () {
+      // noinspection JSUnresolvedFunction
+      return this.text.toLowerCase();
+    }
   }
 }
 </script>
