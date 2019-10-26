@@ -1,8 +1,7 @@
 <template>
-  <form v-on:submit.prevent="onFormSubmit">
+  <form :id="formID" v-on:submit.prevent="onFormSubmit">
     <div class="grid">
       <TextField text="Username"></TextField>
-      <TextField text="Password"></TextField>
     </div>
     <button type="submit">Submit</button>
   </form>
@@ -10,12 +9,21 @@
 
 <script>
 import TextField from "@/components/TextField";
+
 export default {
   name: "Login",
   components: {TextField},
+  computed: {
+    formID: function () {
+      return `f${this._uid}`;
+    }
+  },
   methods: {
     onFormSubmit: function () {
       console.log("Form submitted");
+      let form = document.querySelector(`#${this.formID}`);
+      let data = new FormData(form);
+      console.log(data.get("username"));
     }
   }
 }
