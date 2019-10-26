@@ -1,7 +1,9 @@
 <template>
   <div>
-    <label v-bind:for="text.toLowerCase()">{{ text }}: </label>
-    <input type="text" v-bind:id="text.toLowerCase()">
+    <!--suppress JSUnresolvedFunction -->
+    <label :for="text.toLowerCase()">{{ text }}: </label>
+    <!--suppress JSUnresolvedFunction -->
+    <input type="text" :name="text.toLowerCase()" :id="text.toLowerCase()">
   </div>
 </template>
 
