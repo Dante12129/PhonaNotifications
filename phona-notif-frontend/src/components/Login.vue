@@ -1,5 +1,5 @@
 <template>
-  <form v-on:click.prevent="onFormSubmit()">
+  <form v-on:submit.prevent="onFormSubmit">
     <div class="grid">
       <TextField text="Username"></TextField>
       <TextField text="Password"></TextField>
@@ -15,7 +15,7 @@ export default {
   components: {TextField},
   methods: {
     onFormSubmit: function () {
-      console.log("Form submitted")
+      console.log("Form submitted");
     }
   }
 }
