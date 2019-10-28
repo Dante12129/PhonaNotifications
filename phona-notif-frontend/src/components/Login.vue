@@ -20,10 +20,15 @@ export default {
   },
   methods: {
     onFormSubmit: function () {
+      // Get username from form
       console.log("Form submitted");
       let form = document.querySelector(`#${this.formID}`);
       let data = new FormData(form);
-      console.log(data.get("username"));
+      let username = data.get("username");
+      console.log(username);
+
+      // Go to appropriate page
+      this.$router.push("user");
     }
   }
 }
