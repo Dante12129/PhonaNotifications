@@ -28,7 +28,7 @@ export default {
       console.log(username);
 
       // Go to appropriate page
-      this.$router.push("user");
+      this.$router.push({ path: `user/${username}` });
     }
   }
 }
