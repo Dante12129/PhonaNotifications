@@ -28,7 +28,9 @@ export default {
       console.log(username);
 
       // Go to appropriate page
-      this.$router.push({ path: `user/${username}` });
+      if (username !== "") {
+        this.$router.push({path: `user/${username}`});
+      }
     }
   }
 }
