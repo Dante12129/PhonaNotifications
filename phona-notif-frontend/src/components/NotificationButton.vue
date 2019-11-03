@@ -5,6 +5,8 @@
 </template>
 
 <script>
+  import Notification from "@/Notification";
+
   export default {
     name: "NotificationButton",
     props: {
@@ -21,7 +23,7 @@
     methods: {
       sendNotification: function () {
         console.log(this.prettyKind);
-        this.$root.$data.notifications.push(this.prettyKind)
+        this.$root.$data.notifications.push(new Notification(this.prettyKind))
       }
     }
   }

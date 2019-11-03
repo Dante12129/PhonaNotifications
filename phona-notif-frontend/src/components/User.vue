@@ -7,13 +7,14 @@
       <NotificationButton kind="question"></NotificationButton>
     </div>
     <ul class="centered">
-      <li v-for="item in $root.$data.notifications" :key="item">{{ item }}</li>
+      <li v-for="(notif, i) in $root.$data.notifications" :key="i + notif.kind">{{ notif.kind }}</li>
     </ul>
   </div>
 </template>
 
 <script>
   import NotificationButton from "@/components/NotificationButton";
+
   export default {
     name: "User",
     components: {NotificationButton},
