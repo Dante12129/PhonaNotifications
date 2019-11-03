@@ -18,7 +18,13 @@ const router = new VueRouter({
   ]
 });
 
+// Data
+let store = {
+  notifications: []
+};
+
 new Vue({
   render: h => h(App),
-  router: router
+  router: router,
+  data: store
 }).$mount('#app');

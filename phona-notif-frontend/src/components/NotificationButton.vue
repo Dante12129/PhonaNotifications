@@ -21,6 +21,7 @@
     methods: {
       sendNotification: function () {
         console.log(this.prettyKind);
+        this.$root.$data.notifications.push(this.prettyKind)
       }
     }
   }
