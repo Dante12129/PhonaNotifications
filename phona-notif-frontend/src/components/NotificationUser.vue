@@ -1,5 +1,5 @@
 <template>
-  <li>{{ notification.kind }} {{ `Outstanding: ${answered}` }}</li>
+  <li><span>{{ notification.kind }}</span> : <span>{{ answered }}</span></li>
 </template>
 
 <script>
@@ -15,10 +15,17 @@
       return {
         answered: false
       }
+    },
+    mounted: function () {
+      setTimeout(function () {
+        this.answered = true;
+      }.bind(this), 2500);
     }
   }
 </script>
 
 <style scoped>
-
+  span {
+    width: 200px;
+  }
 </style>

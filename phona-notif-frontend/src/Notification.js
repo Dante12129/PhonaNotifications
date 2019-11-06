@@ -1,5 +1,6 @@
 export default class Notification {
-  constructor(kind) {
-    this.kind = kind
+  constructor(kind, sender = "") {
+    this.kind = kind;
+    this.sender = sender;
   }
 }
