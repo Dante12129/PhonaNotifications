@@ -7,17 +7,18 @@
       <NotificationButton kind="question"></NotificationButton>
     </div>
     <ul class="centered">
-      <li v-for="(notif, i) in $root.$data.notifications" :key="i + notif.kind">{{ notif.kind }}</li>
+      <NotificationUser v-for="(notif, i) in $root.$data.notifications" :key="i + notif.kind" :notification="notif"></NotificationUser>
     </ul>
   </div>
 </template>
 
 <script>
   import NotificationButton from "@/components/NotificationButton";
+  import NotificationUser from "@/components/NotificationUser";
 
   export default {
     name: "User",
-    components: {NotificationButton},
+    components: {NotificationUser, NotificationButton},
     props: {
       name: {
         type: String,
@@ -39,6 +40,12 @@
 
   .centered {
     margin: 0 auto;
-    width: min-content;
+    width: max-content;
+  }
+
+  ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
   }
 </style>
